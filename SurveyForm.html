@@ -1,0 +1,156 @@
+<!DOCTYPE htlm>
+
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+
+<style>
+
+	
+	body{
+		background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(126, 136, 106, 0.7)
+    ),url('https://s3.amazonaws.com/mk-website-media/wp-content/uploads/sites/2/2018/12/16081125/Wallpaper-MuffinMani_PinkDamask_1.jpg');
+		font-family: 'Ubuntu', sans-serif;
+		font-size: 1.4rem;
+		font-weight: 400;
+		line-height: 1.6;
+		color: #FFFFFF;
+		margin: 10px;
+	}
+	#title,
+	#description{
+		text-align: center;
+	}
+	h1, 
+	p,
+	{
+		font-weight: 500;
+		line-height: 1;
+
+	}
+	
+	#form-background{
+		  width: 800px;
+		  margin: auto;
+		  background-color: #000000;
+		  border: 2px solid black;
+		  opacity: 0.6;
+		  border-radius: 5px; /* rounded corners*/
+
+	}
+	#survey-form{
+		margin: 40px;
+		
+	}
+	label{
+		display: flex;
+	}
+	#name-label-input,
+	#email-label-input,
+	#age-label-input{
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	
+	input, textarea, #dropdown{
+		border-radius: 5px;
+		margin: 0;
+		  font-family: inherit;
+		  font-size: inherit;
+		  line-height: inherit;
+	}
+.input-radio,
+.input-checkbox{
+		display: ;
+	  min-height: 1.25rem;
+  	min-width: 1.25rem;
+}
+.input-textarea {
+  min-height: 120px;
+  padding: 0.625rem;
+  resize: vertical;
+  width: 100%;
+}	
+button{
+	background-color: #7644c7;
+	color: white;
+	font-size: 25px;
+	margin-top: 20px;
+	border-radius: 6px;
+	padding: 12px;
+	width: 100%;
+}	
+#submit{
+	transition-duration: 0.8s;
+}
+#submit:hover{
+	background-color: #a976fa;
+	color: white;
+	}
+
+
+	</style>
+
+
+<head class="header">
+<h1 id="title">Survey Form</h1>
+	<p id="description">Thank you for taking the time to help us improve the platform</p>
+	</head>
+<body>
+<div name="form-background" id="form-background">
+	<div id="survey-form">
+		
+	<form action="/submit-this-form" id="survey-form">
+		<label id="name-label" for="name">Name</label>
+		<input type="text" name="name" id="name-label-input" placeholder="Enter your name" required />
+		<label id="email-label" for="name">Email</label>
+		<input type="email" name="email" id="email-label-input" placeholder="Enter your email" required /> <!--format email correctly. Enter validation error-->
+		<label id="age-label" for="age">Age(optional)</label>
+		<input type="number" name="age" id="age-label-input" min="10" max="99" placeholder="Age">
+		
+
+		<label id="dropdown" for="dropdown"></label>
+			<p>Which best describes your current role?</p>
+			<select name="dropdown" id="dropdown" required>
+			<option disabled selected value>Select Current Role</option><!--disbled-->
+			<option value="student">Student</option>
+			<option value="fullTimeJob">Full time job</option>
+			<option value="paretTimeJob">Part time job</option>
+			<option value="preferNotToSay">Prefer not to say</option>
+			<option value="other">Other</option>
+			</select>
+			
+		<p>Would you recomment facebook to a friend? </p>
+		<ol>
+				<li><input type="radio" name="Definetly-Never" class="input-radio"> Definetly</input></li>
+				<li><input type="radio" name="Definetly-Never" class="input-radio"> Never</input></li>
+				<li><input type="radio" name="Definetly-Never" class="input-radio"> Maybe</input></li>
+			</ol>
+		<p>What is your favorite feature of freeCodeCamp?</p>
+			<select id="dropdown" class="form-control" required>
+				<option disabled selected value>Select Current Role</option>
+				<option>Community</option>
+				<option>Games</option>
+				<option>Shopping</option>
+			</select>
+		
+		<p>What would you like to see improve? (Check all that apply)</p>
+			<ol>
+			<li><input type="checkbox" name="games" class="input-checkbox" > Games</input></li>
+			<li><input type="checkbox" name="shopping" class="input-checkbox" > Shopping</input></li>
+			<li><input type="checkbox" name="firends" class="input-checkbox" > Friends</input></li>
+			<li><input type="checkbox" name="videos" class="input-checkbox" > Videos</input></li>
+			<li><input type="checkbox" name="family" class="input-checkbox" > Family</input></li>
+			<li><input type="checkbox" name="socialMedia" class="input-checkbox" > Social Media</input></li>
+			</ol>
+		<p>Any Comments or suggestions</p>
+			<textarea id="comment" class="input-textarea" placeholder="Enter your comments here.."></textarea> 
+
+				<button id="submit" type="submit" formaction="/page2.html">Submit</button>
+	</form>
+</div>
+</body>
+
+
+</html>
